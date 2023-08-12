@@ -1,0 +1,35 @@
+.navBar {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  padding: 60px 40px 0 40px;
+  height: auto;
+  align-items: center;
+  z-index: 2;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  background-color: rgba(236,230,210,255)
+}
+
+.navTitulo:hover{
+  cursor: pointer;
+}
+
+.enlace {
+    width: 110px;
+    text-align: center;
+}
+
+.enlace:hover{
+  font-weight: 700;
+  transition: 200ms;
+}
+
+
+.navCart{
+    text-align: end;
+    align-items: center;
+    align-content: center;
+    width: 120px;
+  }
+  

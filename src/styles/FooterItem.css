@@ -1,0 +1,9 @@
+.footerImg{
+    width: 50px;
+    padding-bottom: 5px;
+}
+
+.footerItem{
+    width: 33vh;
+    flex-grow: 1;
+}

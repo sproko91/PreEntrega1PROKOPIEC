@@ -1,22 +1,27 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
+import "../../styles/navbar.css";
 
 
 const NavBar = () => {
+
   return (
-<Navbar expand="lg" bg="light" data-bs-theme="light">
-      <Container>
-        <h1 href="#home">WILLOW</h1>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+<Navbar expand="lg">
+      <div className="navBar">
+        <Link to={`/`}>
+          <h1 href="#home" className="navTitulo">WILLOW</h1>
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-end flex-grow-1">
-            <Nav.Link className="enlace">Velas</Nav.Link>
-            <Nav.Link className="enlace">Difusores</Nav.Link>
-            <Nav.Link className="enlace">Contactanos</Nav.Link>
+          <Nav className="me-auto justify-content-end flex-grow-1 ">
+            <Link to={`/category/velas`} className="enlace border-end border-dark">Velas</Link>
+            <Link to={`/category/difusores`}className="enlace border-end border-dark">Difusores</Link>
+            <Link to={`/contactanos`} className="enlace">Contactanos</Link>
           </Nav>
         </Navbar.Collapse>
         <Nav.Link className="navCart"><CartWidget/></Nav.Link>
-      </Container>
+      </div>
     </Navbar>
   );
 };

@@ -1,0 +1,26 @@
+
+
+.bg-light{
+background-color: whitesmoke;
+}
+
+.cardElement{
+    margin:0 40px 40px 40px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    background-color: whitesmoke;
+   }
+
+.cardElement:hover{
+    filter: contrast(1.20);
+    transform: translateY(-8px);
+    transition: 300ms;
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.cardBordeTop {
+    border-top-right-radius: 10% !important;
+    border-top-left-radius: 10%!important;
+    box-sizing: border-box;
+}
+

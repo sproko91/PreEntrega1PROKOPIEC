@@ -1,0 +1,10 @@
+.footerContainer{
+    display: flex;
+    background-color: goldenrod;    
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
