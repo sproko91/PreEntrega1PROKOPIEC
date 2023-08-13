@@ -1,7 +1,7 @@
 const products = [
     { 
         id: "1",
-        category: "velas",
+        category: "Velas",
         name: "Hera",
         capacity: "200 ml",
         img: "../../../public/assets/velas/hera.jpeg",
@@ -10,7 +10,7 @@ const products = [
     },    
     { 
         id: "2",
-        category: "velas",
+        category: "Velas",
         name: "Hera Petit",
         capacity: "50 ml",
         img: "../../../public/assets/velas/hera-petit.jpeg",
@@ -19,7 +19,7 @@ const products = [
     },       
     { 
         id: "3",
-        category: "velas",
+        category: "Velas",
         name: "Godai",
         capacity: "150 ml",
         img: "../../../public/assets/velas/godai.jpeg",
@@ -28,7 +28,7 @@ const products = [
     },
     { 
         id: "4",
-        category: "velas",
+        category: "Velas",
         name: "Elizabeth",
         capacity: "200 ml",
         img: "../../../public/assets/velas/elizabeth.jpeg",
@@ -37,7 +37,7 @@ const products = [
     },        
     { 
         id: "5",
-        category: "velas",
+        category: "Velas",
         name: "Elizabeth Dior",
         capacity: "200 ml",
         img: "../../../public/assets/velas/elizabeth-dior.jpeg",
@@ -46,7 +46,7 @@ const products = [
     },        
     { 
         id: "6",
-        category: "velas",
+        category: "Velas",
         name: "Edessa",
         capacity: "150 ml",
         img: "../../../public/assets/velas/edessa.jpeg",
@@ -55,7 +55,7 @@ const products = [
     },        
     { 
         id: "7",
-        category: "velas",
+        category: "Velas",
         name: "Helena",
         capacity: "150 ml",
         img: "../../../public/assets/velas/helena.jpeg",
@@ -64,7 +64,7 @@ const products = [
     },    
     { 
         id: "8",
-        category: "velas",
+        category: "Velas",
         name: "Catania",
         capacity: "150 ml",
         img: "../../../public/assets/velas/catania.jpeg",
@@ -73,7 +73,7 @@ const products = [
     },
     { 
         id: "9",
-        category: "difusores",
+        category: "Difusores",
         name: "Baco",
         capacity: "200 ml",
         img: "../../../public/assets/difusores/baco.jpeg",
@@ -82,7 +82,7 @@ const products = [
     },    
     { 
         id: "10",
-        category: "difusores",
+        category: "Difusores",
         name: "Medea",
         capacity: "125 ml",
         img: "../../../public/assets/difusores/medea.jpeg",
@@ -91,7 +91,7 @@ const products = [
     },
     { 
         id: "11",
-        category: "difusores",
+        category: "Difusores",
         name: "Baco",
         capacity: "200 ml",
         img: "../../../public/assets/difusores/baco.jpeg",
@@ -100,7 +100,7 @@ const products = [
     },
     { 
         id: "12",
-        category: "difusores",
+        category: "Difusores",
         name: "Medea",
         capacity: "125 ml",
         img: "../../../public/assets/difusores/medea.jpeg",

@@ -4,7 +4,7 @@ import ItemListContainer from './routes/ItemListContainer'
 import ItemDetailContainer from './routes/ItemDetailContainer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FooterContainer from './components/FooterContainer/FooterContainer'
-import ContactContainer from './components/Contact/ContactContainer'
+import ContactContainer from './routes/ContactContainer'
 
 function App() {
 

@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom"
     const [isloading, setIsLoading] = useState (true)
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
+    const [title, setTitle] = useState ('Willow Aromatic - Tienda Online')
  
     useEffect(()=>{
 
@@ -23,11 +24,19 @@ import { useParams } from "react-router-dom"
             })
             .finally(()=> {
                 setIsLoading(false)
+                if (categoryId != undefined){
+                    setTitle('Willow Aromatic - ' + categoryId)
+                }
+                else{
+                    setTitle('Willow Aromatic - Tienda Online')
+                }
             })
         },[categoryId]
     )
 
     return (
+        <>
+        <title>{title}</title>
         <div className="bodyArticulos">
             {isloading ? (
             <>
@@ -51,6 +60,7 @@ import { useParams } from "react-router-dom"
             </>
             }
         </div>
+        </>
     )
  }
 

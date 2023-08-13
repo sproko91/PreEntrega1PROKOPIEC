@@ -3,6 +3,7 @@ import '../styles/ContactContainer.css'
 
 const ContactContainer = () => {
 
+    
     const handleSubmit = (event) => {
         event.preventDefault()
         const fields = Object.fromEntries(new window.FormData(event.target))
@@ -11,6 +12,7 @@ const ContactContainer = () => {
     }
     return (
     <>
+    <title>Willow Aromatic - Contactanos</title>
         <form className="form row g-3" onSubmit={handleSubmit}>
         <div className="col-md-6">
             <label className="form-label">Nombre:</label>
