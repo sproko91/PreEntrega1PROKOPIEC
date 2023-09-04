@@ -1,4 +1,5 @@
 
+
 import '../styles/ContactContainer.css'
 
 const ContactContainer = () => {
@@ -8,7 +9,7 @@ const ContactContainer = () => {
         event.preventDefault()
         const fields = Object.fromEntries(new window.FormData(event.target))
         console.log(fields)
-
+            
     }
     return (
     <>

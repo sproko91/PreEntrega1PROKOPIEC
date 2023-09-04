@@ -1,7 +1,32 @@
 import ItemCount from "../ItemCount/ItemCount"
 import '../../styles/ItemDetail.css'
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
 
-const ItemDetail = ({id, name, img, category, capacity, stock, price }) => {
+const ItemDetail = ({id, name, img, capacity, stock, price, }) => {
+
+    const [quantityAdded, setQuantityAdded] = useState(0)
+    const [aroma, setAroma] = useState('Coco y Vainilla')
+    
+    const {addItem} = useContext(CartContext)
+
+    const handleSelectChange = (event) => {
+        setAroma(event.target.value);
+    }
+
+    const handleOnAdd = (quantity) => {
+        
+        setQuantityAdded(quantity)
+        const date = Date.now()
+
+        const item ={
+            id, name, price, img, aroma, date
+        }
+
+        addItem(item, quantity)
+
+    }
 
     return(
         <>
@@ -26,19 +51,29 @@ const ItemDetail = ({id, name, img, category, capacity, stock, price }) => {
                         <p>
                             Stock: {stock}
                         </p>
-                        <select name="select">
-                            <option value="value1" selected>Coco y Vanilla</option>
-                            <option value="value2" >Flores de la India</option>
-                            <option value="value3">Lavanda</option>
-                            <option value="value4">Naranja y Canela</option>
-                            <option value="value5">Naranja y Pimienta</option>
-                            <option value="value6">Sandia y Pepino</option>
-                            <option value="value7">Mix de Citricos</option>
+                        <select name="select" onChange={handleSelectChange}>
+                            <option value="Coco y Vanilla" selected>Coco y Vanilla</option>
+                            <option value="Flores de la India" >Flores de la India</option>
+                            <option value="Lavanda">Lavanda</option>
+                            <option value="Naranja y Canela">Naranja y Canela</option>
+                            <option value="Naranja y Pimienta">Naranja y Pimienta</option>
+                            <option value="Sandia y Pepino">Sandia y Pepino</option>
+                            <option value="Mix de Citricos">Mix de Citricos</option>
                         </select>
                     </div>
                 </section>
                 <footer>
-                    <ItemCount initial={1} stock={stock} onAdd={(count) => console.log(`Agregaste ${count} al carrito`)} />
+                    {
+                       quantityAdded > 0 ? (
+                            <div className="renderCondicional">
+                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                            <Link to={'/cart'} className="btnAgregar borde">Finalizar compra</Link>
+                            <Link to={'/'} className="btnAgregar borde">Ver productos</Link>
+                            </div>
+                        ) : (
+                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                        )
+                    }
                 </footer>
                 </div>  
         </article>

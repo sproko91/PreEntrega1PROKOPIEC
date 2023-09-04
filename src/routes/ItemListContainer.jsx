@@ -1,8 +1,9 @@
 import ItemList from "../components/ItemListContainer/ItemList"
 import '../styles/itemListContainer.css'
 import { useEffect, useState } from "react"
-import {getProducts, getProductByCategory} from '../components/Products/Products'
 import { useParams } from "react-router-dom"
+import { getDocs, collection, query, where } from "firebase/firestore"
+import { firestore } from "../firebase/client"
 
  const ItemListContainer = ({ greeting }) => {
 
@@ -13,17 +14,28 @@ import { useParams } from "react-router-dom"
  
     useEffect(()=>{
 
-        const asyncFunc = categoryId ? getProductByCategory : getProducts
+        setIsLoading(true)
 
-        asyncFunc(categoryId)
+        const collectionRef = categoryId
+            ? query(collection(firestore, 'productos'), where('category', '==', categoryId))
+            : collection(firestore, 'productos')
+
+        getDocs(collectionRef)
             .then(response => {
-                setProducts(response)
+                const productsAdapted = response.docs.map(doc => {
+                    const data = doc.data()
+                    return{id: doc.id, ...data}
+                })
+                setProducts(productsAdapted)
             })
             .catch(error => {
                 console.log(error)
             })
             .finally(()=> {
-                setIsLoading(false)
+                setTimeout(()=>{
+                    setIsLoading(false)
+                },2000)
+                
                 if (categoryId != undefined){
                     setTitle('Willow Aromatic - ' + categoryId)
                 }

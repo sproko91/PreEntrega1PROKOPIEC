@@ -1,0 +1,13 @@
+
+    .CartItem {
+        margin:10px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        
+    }
+    
+

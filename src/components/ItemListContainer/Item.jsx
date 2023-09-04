@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
             <Card.Body className='bg-light'>
                 <Card.Title className='cardText py-2'>{name}</Card.Title>
                 <p>
-                    Precio: {price}
+                    Precio: $ {price}
                 </p>
             </Card.Body>
         </Link>
