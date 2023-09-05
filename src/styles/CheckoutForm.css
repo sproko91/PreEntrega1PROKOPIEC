@@ -1,0 +1,8 @@
+.formCheckout {
+    margin: 60px auto auto auto!important;
+    width: 40vw;
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 10%;
+}
