@@ -1,4 +1,7 @@
 import {createContext, useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export const CartContext = createContext({
     cart: [],
@@ -23,6 +26,16 @@ export const CartProvider = ({ children }) => {
             const subtotal= item.price * quantity
             setCart(prev => [...prev, {...item, quantity, subtotal }])
             setTotalQuantity(prevQuantity => prevQuantity + quantity)
+            toast.success('Se agrego al carrito!', {
+                position: "top-right",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
     }
 
     const removeItem = (itemDate) => { 
@@ -32,6 +45,17 @@ export const CartProvider = ({ children }) => {
         
         setCart(cartUpdated)
         setTotalQuantity(prevQuantity => prevQuantity - productToRemove.quantity)
+        toast.error('Se elimino del carrito!', {
+            position: "top-right",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+
         }
     }
 
@@ -43,6 +67,7 @@ export const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{cart, addItem, removeItem, clearCart, total: calculateTotal(), totalQuantity }}>
             { children }
+            <ToastContainer />
         </CartContext.Provider>
     )
 }

@@ -1,4 +1,15 @@
-.itemDetailContainer{
-    margin-top: 143px;
-    
+
+
+@media (min-width: 320px) {
+    .itemDetailContainer{
+        margin-top: 80px;
+        min-height: 67vh;
+    }
+}
+
+@media (min-width: 480px) {
+    .itemDetailContainer{
+        margin-top: 149px;
+        min-height: 67vh;
+    }
 }

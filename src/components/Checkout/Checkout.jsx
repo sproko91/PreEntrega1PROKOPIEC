@@ -6,6 +6,7 @@ import { firestore } from '../../firebase/client'
 import { CartContext } from '../../context/CartContext'
 import CheckoutForm from '../Checkout/CheckoutForm'
 
+
 const Checkout = () => {
     
     const [loading, setLoading] = useState(false)
@@ -70,17 +71,27 @@ const Checkout = () => {
         } catch (error) {
             console.error('Error al crear la orden:',error)
         }finally {
-                setLoading(false);
+                setTimeout(() => {
+                    setLoading(false)
+                }, 2000);
+                
         }
     }
 
         if(loading) {
-            return <h1 className='checkoutTitle'>Se está generando su orden...</h1>
-             }
+            return <h1 className='checkoutId'>Se está generando su orden...</h1>
+            }
         
         if (orderId){
-            return <h1 className='checkoutTitle'>El código de seguimiento de su orden es: {orderId}</h1>
-            }
+            return (
+            <>
+            <div className='checkoutId'>
+                <h1 className='checkoutText'>Gracias por su compra!</h1>
+                <h2 className='checkoutText'>El código de seguimiento de su orden es: {orderId}</h2>
+                <h2 className='checkoutText'>Nos pondremos en contacto para coordinar la entrega.</h2>
+            </div>
+            </>
+            )}
     
         return (
         <div>

@@ -15,12 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   background-color: rgba(236,230,210,255);
-
 }
 
 body{
   background-color: rgba(236,230,210,255)!important;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   padding-bottom: 160px;
 }

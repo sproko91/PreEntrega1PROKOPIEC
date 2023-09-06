@@ -17,6 +17,8 @@ const CheckoutForm = ({onConfirm}) =>{
             onConfirm(userData)
         }
 
+        const isButtonDisabled = !(name !== '' && lastname !== '' && phone !== '' && email !== '' )
+
         return (
             <>
             <form className="form row g-3 formCheckout" onSubmit={handleSubmit}>
@@ -30,14 +32,14 @@ const CheckoutForm = ({onConfirm}) =>{
             </div>
             <div className="col-12">
                 <label className="form-label">Telefono:</label>
-                <input name='phone' type="text" className="form-control" placeholder="1155667788" value={phone} onChange={({ target }) => setPhone(target.value)}/>
+                <input name='phone' type="number" className="form-control" placeholder="1155667788" value={phone} onChange={({ target }) => setPhone(target.value)}/>
             </div>
             <div className="col-12">
                 <label className="form-label">Email:</label>
                 <input name='email' type="email" className="form-control" placeholder="xxxxxx@gmail.com" value={email} onChange={({ target }) => setEmail(target.value)}/>
             </div>
              <div className="col-12 text-center">
-                <button type="submit" className="btnAgregar btnForm">Crear Orden</button>
+                <button disabled={isButtonDisabled} type="submit" className="btnAgregar btnForm">Crear Orden</button>
             </div>
             </form>
             </>

@@ -15,9 +15,8 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end flex-grow-1 ">
-            <Link to={`/category/Velas`} className="enlace border-end border-dark">Velas</Link>
-            <Link to={`/category/Difusores`}className="enlace border-end border-dark">Difusores</Link>
-            <Link to={`/contactanos`} className="enlace">Contactanos</Link>
+            <Link to={`/category/Velas`} className="enlace">Velas</Link>
+            <Link to={`/category/Difusores`}className="enlace">Difusores</Link>
           </Nav>
         </Navbar.Collapse>
         <Nav.Link className="navCart"><CartWidget/></Nav.Link>

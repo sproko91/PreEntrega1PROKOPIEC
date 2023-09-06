@@ -1,6 +1,28 @@
-.checkoutTitle{
-    width: 100%;
-    text-align: center;
-    padding-top: 100px;
-}
+@media (min-width: 320px) {
+    .checkoutTitle{
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+    }
 
+    .checkoutId{
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+        min-height: 45vh;
+    }
+
+    .checkoutText{
+        line-height: 2em;
+    }
+}
+    
+    @media (min-width: 480px) {
+    
+        .checkoutId{
+            width: 100%;
+            text-align: center;
+            padding-top: 80px;
+            min-height: 75vh;
+        }
+    }

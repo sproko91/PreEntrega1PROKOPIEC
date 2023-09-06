@@ -1,8 +1,20 @@
-.formCheckout {
-    margin: 60px auto auto auto!important;
-    width: 40vw;
-    background-color: whitesmoke;
-    padding: 20px;
-    border: 2px solid gold;
-    border-radius: 10%;
+
+
+
+@media (min-width: 320px) {
+    .formCheckout {
+        margin: 60px auto 60px auto!important;
+        width: 80vw;
+        background-color: whitesmoke;
+        padding: 20px;
+        border: 2px solid gold;
+        border-radius: 10%;
+    }
+}
+
+@media (min-width: 910px) {
+    .formCheckout {
+        margin: 60px auto 208px auto!important;
+        width: 40vw;
+    }
 }

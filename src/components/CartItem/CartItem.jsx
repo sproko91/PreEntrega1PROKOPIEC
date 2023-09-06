@@ -10,11 +10,11 @@ const CartItem = ({ id, name, img, price, quantity, subtotal, aroma, date}) => {
     return (
         <div className="CartItem">
             <img src={img} alt={name} className="ItemImgCart"/>
-            <h3>{name}</h3>
+            <h3 className="none910">{name}</h3>
             <p>{aroma}</p>
             <p>Cantidad: {quantity}</p>
-            <p>Precio x unidad: $ {price}</p>
-            <p><strong>Subtotal: $ {subtotal}</strong></p>
+            <p className="none910">Precio x unidad: $ {price}</p>
+            <p className="none580"><strong>Subtotal: $ {subtotal}</strong></p>
             <button onClick={() => removeItem(date)} className="btnAgregar">Eliminar</button>
        </div>
     );
