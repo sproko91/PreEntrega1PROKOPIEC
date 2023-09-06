@@ -43,7 +43,7 @@ const ItemDetail = ({id, name, img, capacity, stock, price, }) => {
                 <section className="detailSection textLeft">
                     <div>
                         <p>
-                            Precio: {price}
+                            Precio: $ {price}
                         </p>
                         <p>
                             Capacidad: {capacity}
